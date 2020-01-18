@@ -8,7 +8,7 @@ The clustered poller, `clpoll`, is a replacement poller for the RTG system. It
 stems from a need for a faster, more intelligent poller that minimizes polling
 time and database load.
 
-**This version was forked to include small changes to support MySQL 8.x***
+**This version was forked to include small changes to support MySQL 8.x**
 
 The 'my_bool' type is no longer used in MySQL source code. Any third-party code that used this type to represent C boolean variables should use the bool or int C type instead.
 
