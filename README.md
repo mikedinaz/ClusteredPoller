@@ -1,11 +1,3 @@
-# This project is not actively maintained
-
-Issues and pull requests on this repository may not be acted on in a timely
-manner, or at all.  You are of course welcome to use it anyway. You are even
-more welcome to fork it and maintain the results.
-
-![Unmaintained](https://nym.se/img/unmaintained.jpg)
-
 RTG Clustered Poller
 ====================
 
@@ -15,6 +7,12 @@ statistics system.**
 The clustered poller, `clpoll`, is a replacement poller for the RTG system. It
 stems from a need for a faster, more intelligent poller that minimizes polling
 time and database load.
+
+**This version was forked to include small changes to support MySQL 8.x***
+
+The 'my_bool' type is no longer used in MySQL source code. Any third-party code that used this type to represent C boolean variables should use the bool or int C type instead.
+
+
 
 Features
 --------
