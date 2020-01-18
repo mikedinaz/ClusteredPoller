@@ -142,7 +142,7 @@ unsigned print_database_queue(struct rtgconf *config)
 MYSQL *connection(struct rtgconf *config)
 {
         MYSQL *conn = mysql_init(NULL);
-        my_bool reconnect = 1;
+        bool reconnect = 1;
 
         if (conn == NULL) {
                 cllog(0, "MySQL error %u: %s", mysql_errno(conn), mysql_error(conn));
@@ -155,7 +155,7 @@ MYSQL *connection(struct rtgconf *config)
         }
 
         mysql_options(conn, MYSQL_OPT_RECONNECT, &reconnect);
-        mysql_autocommit(conn, (my_bool) 0);
+        mysql_autocommit(conn, (bool) 0);
 
         return conn;
 }
